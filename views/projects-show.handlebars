@@ -1,0 +1,14 @@
+<a href="/">Back to Home</a>
+
+<div class="row">
+  <div class="col-sm-6 col-sm-offset-3">
+    <h1>{{project.title}}</h1>
+    <h5>{{project.description}}</h5>
+    <p>{{project.contents}}</p>
+
+    <!-- Delete button -->
+    <p><form method="POST" action="/projects/{{project._id}}?_method=DELETE">
+      <button type="submit">Delete</button>
+    </form></p>
+  </div>
+</div>
