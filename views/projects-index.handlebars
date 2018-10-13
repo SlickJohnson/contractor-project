@@ -1,6 +1,17 @@
 <h1>Current Projects</h1>
 
-{{#each projects}}
-<h3>{{this.title}}</h3>
-<p>{{this.description}}</p>
-{{/each}}
+<hr>
+
+<div class="container">
+  {{#each projects}}
+  <a href="/projects/{{this.id}}">
+    <div class="card bg-dark text-white" style="width: 75%;">
+      <img class="card-img" src="https://via.placeholder.com/493x270" alt="">
+      <div class="card-img-overlay">
+        <h2 class="card-title">{{this.title}}</h2>
+        <p class="card-text">{{this.description}}</p>
+      </div>
+    </div>
+  </a>
+  {{/each}}
+</div>
