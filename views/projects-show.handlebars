@@ -1,21 +1,26 @@
 <div class="container">
-  <a href="/">Back to Home</a>
-
   <div class="row mt-sm-4 mt-md-0">
+    <div class="col-sm-12 col-md-4">
+      <h3 class="mb-4">Menu</h3>
+
+      <ul class="nav flex-column nav-pills">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">About</a>
+          <a class="nav-link" href="#">Milestones</a>
+          <a class="nav-link" href="#">Donations</a>
+          <a class="nav-link" href="/">Back to Projects</a>
+          <a class="nav-link"><form method="POST" action="/projects/{{project._id}}?_method=DELETE">
+            <button type="submit">Delete</button>
+          </form></a>
+        </li>
+      </ul>
+    </div>
+
     <div class="col-sm-12 col-md-8 text-sm-center text-md-left">
       <h1>{{project.title}}</h1>
       <p class="lead">{{project.description}}</p>
 
       <p>{{project.content}}</p>
     </div>
-
-    <div class="col-sm-12 col-md-4">
-      sadf
-    </div>
   </div>
 </div>
-
-<!-- Delete button -->
-<p><form method="POST" action="/projects/{{project._id}}?_method=DELETE">
-  <button type="submit">Delete</button>
-</form></p>
