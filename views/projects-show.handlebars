@@ -1,14 +1,21 @@
-<a href="/">Back to Home</a>
+<div class="container">
+  <a href="/">Back to Home</a>
 
-<div class="row">
-  <div class="col-sm-6 col-sm-offset-3">
-    <h1>{{project.title}}</h1>
-    <h5>{{project.description}}</h5>
-    <p>{{project.contents}}</p>
+  <div class="row mt-sm-4 mt-md-0">
+    <div class="col-sm-12 col-md-8 text-sm-center text-md-left">
+      <h1>{{project.title}}</h1>
+      <p class="lead">{{project.description}}</p>
 
-    <!-- Delete button -->
-    <p><form method="POST" action="/projects/{{project._id}}?_method=DELETE">
-      <button type="submit">Delete</button>
-    </form></p>
+      <p>{{project.content}}</p>
+    </div>
+
+    <div class="col-sm-12 col-md-4">
+      sadf
+    </div>
   </div>
 </div>
+
+<!-- Delete button -->
+<p><form method="POST" action="/projects/{{project._id}}?_method=DELETE">
+  <button type="submit">Delete</button>
+</form></p>
