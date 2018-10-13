@@ -16,11 +16,21 @@ module.exports = (app) => {
 
   // CREATE
   app.post('/projects', (req, res) => {
-    Project.create(req.body).then((review) => {
-      console.log(review);
-      res.redirect(`/projects/${req.params.projectId}`);
+    Project.create(req.body).then((project) => {
+      console.log(project);
+      res.redirect(`/projects/${project._id}`);
     }).catch((err) => {
       console.log(err.message);
     });
   });
-}  
+
+  // SHOW
+  app.get('/projects/:id', (req, res) => {
+    // Find project
+    Project.findById(req.params.id).then((project) => {
+      res.render('projects-show', { project });
+    }).catch((err) => {
+      console.log(err.message);
+    });
+  });
+};
