@@ -1,17 +1,26 @@
-<h1>Current Projects</h1>
-
-<hr>
-
 <div class="container">
-  {{#each projects}}
-  <a href="/projects/{{this.id}}">
-    <div class="card bg-dark text-white" style="width: 75%;">
-      <img class="card-img" src="https://via.placeholder.com/493x270" alt="">
-      <div class="card-img-overlay">
-        <h2 class="card-title">{{this.title}}</h2>
-        <p class="card-text">{{this.description}}</p>
-      </div>
+  <div class="jumbotron">
+    <h1 class="display-4">Our Mission</h1>
+    <p class="lead">In consectetur et veniam et ut nulla tempor aute officia dolor. Eiusmod et nulla ad sit culpa fugiat sunt magna ipsum eiusmod. Eiusmod magna laborum amet nulla deserunt minim ad excepteur velit exercitation ex reprehenderit exercitation Lorem. Eu ipsum et sunt enim consectetur qui minim consectetur consectetur ex cillum amet. Tempor dolore qui laboris velit labore enim ut ex irure ea labore commodo amet ipsum.</p>
+
+    <p class="lead">
+      <a class="btn btn-primary btn-lg" href="#" role="button">Save the World</a>
+    </p>
+  </div>
+
+  <div class="row">
+    {{#each projects}}
+    <div class="col-sm-12 col-md-6">
+      <a href="/projects/{{this.id}}">
+        <div class="card bg-dark text-white mb-4">
+          <img class="card-img" src="https://via.placeholder.com/493x270" alt="">
+          <div class="card-img-overlay">
+            <h2 class="card-title">{{this.title}}</h2>
+            <p class="card-text">{{this.description}}</p>
+          </div>
+        </div>
+      </a>
     </div>
-  </a>
-  {{/each}}
+    {{/each}}
+  </div>
 </div>
