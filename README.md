@@ -1,2 +1,1 @@
-# rotten-potatoes
 # contractor-project
