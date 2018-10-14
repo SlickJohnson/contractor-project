@@ -1,21 +1,26 @@
 <fieldset>
-  <legend>Edit Project</legend>
-
+    <legend>Edit Project</legend>
   <!-- TITLE -->
-  <div class="form-group">
-    <label for="project-title">Title</label><br>
-    <input id="project-title" type="text" name="title" value="{{project.title}}" >
-  </div>
+    <div class="input-group mb-3">
+      <input class="form-control" id="project-title" type="text" name="title" value="{{project.title}}">
+      <div class="input-group-append">
+        <span class="input-group-text" for="project-content">Title</span><br>
+      </div>
+    </div>
 
   <!-- DESCRIPTION -->
-  <div class="form-group">
-    <label for="project-description">Description</label><br>
-    <textarea id="project-description" name="description" rows="10">{{project.description}}</textarea>
-  </div>
+    <div class="input-group mb-3">
+      <textarea class="form-control" id="project-description" name="description" rows="10">{{project.description}}</textarea>
+      <div class="input-group-append">
+        <span class="input-group-text" for="project-content">Description</span><br>
+      </div>
+    </div>
 
-    <!-- CONTENT -->
-  <div class="form-group">
-    <label for="project-content">Content</label><br>
-    <textarea id="project-content" name="content" rows="30">{{project.content}}</textarea>
-  </div>
+  <!-- CONTENT -->
+    <div class="input-group mb-3">
+      <textarea class="form-control form-control-lg" id="project-content" name="content" rows="10">{{project.content}}</textarea>
+      <div class="input-group-append">
+        <span class="input-group-text" for="project-content">Content</span><br>
+      </div>
+    </div>
 </fieldset>

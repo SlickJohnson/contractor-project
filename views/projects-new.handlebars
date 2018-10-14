@@ -1,12 +1,12 @@
-<div class="row">
-  <div class="col-sm-6 col-sm-offset-3">
-    <form method="POST" action="/projects">
+<div class="container">
+  <form method="POST" action="/projects" style="margin:auto;">
+    <div class="jumbotron bg-transparent" style="max-width:500px;margin:auto;">
       {{> projects-form}}
       <!-- BUTTON -->
-      <div class="form-group">
+      <div class="form-group mb-2">
         <button class="btn btn-primary" type="submit">Save Project</button>
-        <a href="/">Cancel</a>
+        <a class="btn btn-secondary" href="/">Cancel</a>
       </div>
-    </form>
-  </div>
+    </div>
+  </form>
 </div>
