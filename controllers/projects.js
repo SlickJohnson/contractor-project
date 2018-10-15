@@ -33,4 +33,31 @@ module.exports = (app) => {
       console.log(err.message);
     });
   });
+
+  // EDIT
+  app.get('/projects/:id/edit', (req, res) => {
+    Project.findById(req.params.id, (err, project) => {
+      res.render('projects-edit', { project });
+    });
+  });
+
+  // UPDATE
+  app.put('/projects/:id', (req, res) => {
+    Project.findByIdAndUpdate(req.params.id, req.body)
+      .then((project) => {
+        res.redirect(`/projects/${project._id}`);
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
+  });
+
+  // DELETE
+  app.delete('/projects/:id', (req, res) => {
+    Project.findByIdAndRemove(req.params.id).then(() => {
+      res.redirect('/');
+    }).catch((err) => {
+      console.log(err.message);
+    });
+  });
 };

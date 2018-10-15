@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="jumbotron bg-transparent" style="max-width: 75%; margin:auto;">
+    <form method="POST" action="/projects/{{project._id}}?_method=PUT" style="margin:auto;">
+        {{> projects-form}}
+        <!-- BUTTON -->
+        <div class="form-group mb-2">
+          <button class="btn btn-primary" type="submit">Save Project</button>
+        </div>
+    </form>
+  
+    <form method="POST" action="/projects/{{project._id}}?_method=DELETE">
+      <a class="btn btn-secondary" href="/">Cancel</a>
+      <button class="btn btn-danger" type="submit">Delete</button>
+    </form>
+  </div>
+</div

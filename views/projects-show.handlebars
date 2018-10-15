@@ -9,10 +9,8 @@
           <a class="nav-link active" href="#">About</a>
           <a class="nav-link" href="#">Milestones</a>
           <a class="nav-link" href="#">Donations</a>
+          <a class="nav-link" href="/projects/{{project._id}}/edit">Edit</a>
           <a class="nav-link" href="/">Back to Projects</a>
-          <a class="nav-link"><form method="POST" action="/projects/{{project._id}}?_method=DELETE">
-            <button type="submit">Delete</button>
-          </form></a>
         </li>
       </ul>
     </div>
