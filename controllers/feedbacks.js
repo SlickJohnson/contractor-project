@@ -11,7 +11,7 @@ module.exports = (app) => {
   });
 
   // DELETE
-  app.delete('/projects/feedback/:id', (req, res) => {
+  app.delete('/projects/:id/feedback/:id', (req, res) => {
     Feedback.findByIdAndRemove(req.params.id).then((feedback) => {
       res.redirect(`/projects/${feedback.projectId}`);
     }).catch((err) => {
