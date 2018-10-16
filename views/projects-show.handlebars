@@ -19,8 +19,20 @@
     <div class="col-sm-12 col-md-8 text-sm-center text-md-left">
       <h1>{{project.title}}</h1>
       <p class="lead">{{project.description}}</p>
-
+      
       <p>{{project.content}}</p>
+    </div>
+
+    <hr>
+
+    <!-- Feedback -->
+    <div class="col-sm-12 ">
+      {{> feedback-form}}
+      <hr>
+      <!-- Show Feedback -->
+      {{#each feedbacks}}
+        {{> feedback}}
+      {{/each}}
     </div>
   </div>
 </div>

@@ -11,6 +11,8 @@ const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
 
 const projects = require('./controllers/projects');
+const feedbacks = require('./controllers/feedbacks');
+
 
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/save-the-world', { useNewUrlParser: true });
 
@@ -26,6 +28,7 @@ app.set('view engine', 'handlebars');
 app.use(express.static('public'));
 
 projects(app);
+feedbacks(app);
 
 module.exports = app.listen(process.env.PORT || 3000, () => {
   console.log('App listening on port 3000!');

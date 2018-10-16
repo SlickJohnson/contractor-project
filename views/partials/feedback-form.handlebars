@@ -1,0 +1,33 @@
+<form action="/projects/{{project.id}}/feedback" method="POST">
+  <input type="hidden" name="projectId" value="{{project._id}}">
+  <fieldset>
+    <legend>Add feedback</legend>
+    <!-- TITLE -->
+    <div class="input-group mb-3">
+      <input class="form-control"
+        id="feedback-title"
+        type="text" name="title"
+        placeholder="Title" >
+      <div class="input-group-append">
+        <span class="input-group-text" for="project-content">Title</span><br>
+      </div>
+    </div>
+
+    <!-- DESCRIPTION -->
+    <div class="input-group mb-3">
+      <textarea class="form-control"
+        id="feedback-content"
+        name="content"
+        rows="10"
+        placeholder="Your feedback..."></textarea>
+      <div class="input-group-append">
+        <span class="input-group-text" for="project-content">Description</span><br>
+      </div>
+    </div>
+  </fieldset>
+
+  <!-- BUTTON -->
+  <div class="form-group">
+    <button class="btn btn-primary" type="submit">Save feedback</button>
+  </div>
+</form>

@@ -1,4 +1,5 @@
 const Project = require('../models/project');
+const Feedback = require('../models/feedback');
 
 module.exports = (app) => {
   // INDEX
@@ -28,7 +29,9 @@ module.exports = (app) => {
   app.get('/projects/:id', (req, res) => {
     // Find project
     Project.findById(req.params.id).then((project) => {
-      res.render('projects-show', { project });
+      Feedback.find({ projectId: req.params.id }).then((feedbacks) => {
+        res.render('projects-show', { project, feedbacks });
+      });
     }).catch((err) => {
       console.log(err.message);
     });
